@@ -43,7 +43,7 @@ def Silu() -> PureLayer:
 
 @assert_shape("...->...")
 def Mish() -> PureLayer:
-    return Fn("Mish", lambda x: jnp.tanh(jnp.logaddexp(x, 0.0)))
+    return Fn("Mish", lambda x: x * jnp.tanh(jnp.logaddexp(x, 0.0)))
 
 
 @assert_shape("...->...")
@@ -66,4 +66,4 @@ def TanhShrink() -> PureLayer:
 
 @assert_shape("...->...")
 def TanhExp() -> PureLayer:
-    return Fn("TanhExp", lambda x: jnp.tanh(jnp.exp(x)))
+    return Fn("TanhExp", lambda x: x * jnp.tanh(jnp.exp(x)))
