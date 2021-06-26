@@ -1,4 +1,6 @@
 # Trax Extra Activation Functions
+Extra activation functions for [Trax](https://github.com/google/trax)
+
 <code>pip install trax-extra-activation</code>
 
 ## How to use
